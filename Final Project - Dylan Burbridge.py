@@ -7,4 +7,5 @@ cardvalues = [ 'One','Two','Three','Four','Five','Six','Seven','Eight','Nine','T
 createdeck = [f"{value} of {suit}" for suit in cardsuits for value in cardvalues]
 
 print("\n create deck:")  
-for card in deck
+for card in createdeck:
+    print(card)
