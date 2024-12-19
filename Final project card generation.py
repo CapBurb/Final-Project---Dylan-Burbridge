@@ -1,3 +1,6 @@
+
+# this file is the "Deck Creation file" it is responsible for creating a deck of 52 cards to mimic that of the decks used in blackjack.
+
 print("|_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_|")
 print("♣-♦-♥-♠- Welcome to Python BlackJack -♠-♥-♦-♣")
 print("|-------------------------------------------|")
