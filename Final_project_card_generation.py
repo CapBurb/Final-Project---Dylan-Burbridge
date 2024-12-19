@@ -11,7 +11,3 @@ cardvalues = [ 'One','Two','Three','Four','Five','Six','Seven','Eight','Nine','T
 # this line pairs the cardsuits to the cardvalues to create four sets of 14 unique cards for a deck total of 52 cards (no jokers)
 createdeck = [f"{value} of {suit}" for suit in cardsuits for value in cardvalues]
 
-#this line is used only to confirm that all 52 cards are present and not repeated, it will not be used outside of this file
-print("\n create deck:")  
-for card in createdeck:
-    print(card)
