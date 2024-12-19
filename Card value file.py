@@ -6,3 +6,7 @@ def playerhandvalue:
     values = {
         'One' = 1, 'Two' = 2, 'Three' = 3, 'Four' = 4, 'Five' = 5, 'Six' = 6, 'Seven' = 7, 'Eight' = 8, 'Nine' = 9, 'Ten' = 10, 'Jack' = 10, 'Queen' = 10, 'King' = 10, 'Ace' = 11 }
 
+# While the ace value is determined to be worth 11, the game of Blackjack dictates that the value of aces are either 1 or 10 depending on the hand of the player
+# The code below will determine the value of an ace based on the value of a players hand (above or below 21)
+
+value = sum
