@@ -75,14 +75,23 @@ def gameround(deck):
         while housesvalue < 16: 
             houseshand.append(dealcard(deck))
             housesvalue = playerhandvalue(houseshand)
-            print(f"\n The Houses hand is now : {houseshand}, [Unknown Card] \nThe value of the Houses hand is: {housesvalue}")
+            print(f"\n The Houses hand is now : {houseshand}, \nThe value of the Houses hand is: {housesvalue}")
+
+# This will compare the scores of the final game and show if the house won, tied or lost
+        print(f"\nGame results: \nYour hand is: {playershand} \nThe value of your hand is: {playersvalue}")
+        print(f"\nThe Houses hand is: {houseshand} \nThe value of the Houses hand is: {housesvalue}")           
 
 
-                
-                
+#these lines compare the value of the players total cards vs the value of the houses total cards
+# it also will print to show the players if they win tie or lose
+    if housesvalue > 21 or playersvalue > housesvalue:
+        print("\nYou've won this game!")          
+    elif playersvalue == housesvalue:
+        print("\nIt's a tie, push to next game.")
+    else:
+        print("\nThe house always wins. \n Better luck next game.")
 
     
-
 
 if __name__ == "__main__":
 
