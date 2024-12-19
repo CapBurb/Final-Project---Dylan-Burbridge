@@ -25,4 +25,10 @@ def gameround(deck):
     houseshand = [dealcard(deck),dealcard(deck)]
 
 # This print statement will show the player the value of their two cars
-print(f"\nyour hand is : {playershand}")
+    print(f"\nyour hand is : {playershand}")
+
+if __name__ == "__main__":
+    deck = createdeck[:]
+    random.shuffle(deck) # This with "shuffle" the deck to ensure cards are not repeated
+
+gameround(deck)
