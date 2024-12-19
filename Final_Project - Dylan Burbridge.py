@@ -52,7 +52,13 @@ def gameround(deck):
                 if playersvalue == 21: 
                     print ("Winner, Blackjack")
                     
-                elif
+                elif playersvalue > 21:
+                    print (You lose, bust)
+
+            elif move == "stand":
+                break
+            else:
+                print("No imput detected, please only print "Hit" or "Stand")
                 
 
                 
