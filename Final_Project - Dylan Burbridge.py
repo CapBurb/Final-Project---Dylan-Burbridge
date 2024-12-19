@@ -31,42 +31,42 @@ def gameround(deck):
     playersvalue = playerhandvalue(playershand)
     housesvalue = playerhandvalue(houseshand)
 
-    print(f"\n Your hand is : {playershand}. \n The value of your hand is: {playersvalue}")
-    print(f"\n Houses hand is: {houseshand[0]}. \n The value of the houses hand is: {housesvalue}")
+    print(f"\n Your hand is: \n {playershand}. \n The value of your hand is: {playersvalue}")
+    print(f"\n Houses hand is: \n ['{houseshand[0]}'].")
 
 
     #the two lines below will immediately determine if the play wins or looses based on the slim chance
     # that a player immediately gets a value of 21 or higher
     if playersvalue == 21: 
-        print ("Winner!, You've got Blackjack")
+        print ("\nWinner!, You've got Blackjack!")
 
     elif playersvalue > 21:
-        print ("Bust, You've lost!")
+        print ("\nBust, You've lost!")
 
     else:
         while playersvalue < 21:
-            playermove = input("Choose to Stand or Hit. Please type 'hit' or 'stand': ") .strip().lower() # Added strip and lower values to prevent a misinput 
+            playermove = input("\n Choose to Stand or Hit. Please type 'hit' or 'stand': ") .strip().lower() # Added strip and lower values to prevent a misinput 
             #if player capitalizes or adds a space in their answer
             if playermove == "hit": #This will randomly select a new card from the deck and give it to the player
                 playershand.append(dealcard(deck))
                 playersvalue = playerhandvalue(playershand) # this line will update the value of the players hand if they take a new card or "hit"
-                print(f"Your hand is now: {playershand} (Your value is now: {playersvalue})")
+                print(f"\nYour hand is now: {playershand} \nThe value of your hand is now: {playersvalue})")
 
                 if playersvalue == 21: 
-                    print ("Winner, You've got Blackjack")
+                    print ("\nWinner, You've got Blackjack!")
                     
                 elif playersvalue > 21:
-                    print ("Bust, You've lost!")
+                    print ("\nBust, You've lost!")
 
             elif playermove == "stand":
                 break
             #this line below ensures player only types either "Hit" or "Stand"
             #as these are the only acceptable inputs, nothing will happen if either is not inputed
             else:
-                print("No imput detected, please only print 'Hit' or 'Stand'")
+                print("\nNo input detected, please only print 'Hit' or 'Stand'")
 
 
-        print(f"\n houses hand is: {houseshand}")
+        print(f"\n The Houses hand is: {houseshand} \nThe value of the Houses hand is: {housesvalue}")
 
 
         # This is a result of researching casinos, to simpify for a simple card game if the house (computer)
@@ -75,7 +75,7 @@ def gameround(deck):
         while housesvalue < 16: 
             houseshand.append(dealcard(deck))
             housesvalue = playerhandvalue(houseshand)
-            print(f"house takes a card: {houseshand[-1]} (houses value is: {housesvalue})")
+            print(f"\n The Houses hand is: {houseshand[-1]} The value of the Houses handis: {housesvalue})")
 
 
                 
