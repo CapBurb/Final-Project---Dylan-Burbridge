@@ -9,6 +9,17 @@ print("|-------------------------------------------|")
 
 import random
 
+# These call up seperate files for the value of a players hand and
+# The creation of a deck of cards
 from Card_value_file import playerhandvalue
 from Final project card generation import createdeck
 
+# This will represent a player being dealt a card from the deck
+def dealcard(deck):
+    return deck.pop(random.randint(0, len(deck - 1)))
+
+# This starts the round of blackjack, Dealing two cards to both the player and 
+# "house" (The computer) 
+def gameround(deck):
+    playershand = [dealcard(deck)]
+    houseshand = [dealcard(deck)]
