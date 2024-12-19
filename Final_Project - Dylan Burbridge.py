@@ -31,32 +31,32 @@ def gameround(deck):
     playersvalue = playerhandvalue(playershand)
     housesvalue = playerhandvalue(houseshand)
 
-    print(f"\n Your hand is : {playershand}. The value of your hand is {playersvalue}")
-    print(f"\n Houses hand is: {houseshand[0]}. The value of the houses hand is {housesvalue}")
+    print(f"\n Your hand is : {playershand}. \n The value of your hand is: {playersvalue}")
+    print(f"\n Houses hand is: {houseshand[0]}. \n The value of the houses hand is: {housesvalue}")
 
 
     #the two lines below will immediately determine if the play wins or looses based on the slim chance
     # that a player immediately gets a value of 21 or higher
     if playersvalue == 21: 
-        print ("Winner, Blackjack")
+        print ("Winner!, You've got Blackjack")
 
     elif playersvalue > 21:
-        print ("You lose, bust")
+        print ("Bust, You've lost!")
 
     else:
         while playersvalue < 21:
-            playermove = input("stand or hit") .strip().lower() # Added strip and lower values to prevent a misinput 
+            playermove = input("Choose to Stand or Hit. Please type 'hit' or 'stand': ") .strip().lower() # Added strip and lower values to prevent a misinput 
             #if player capitalizes or adds a space in their answer
             if playermove == "hit": #This will randomly select a new card from the deck and give it to the player
                 playershand.append(dealcard(deck))
                 playersvalue = playerhandvalue(playershand) # this line will update the value of the players hand if they take a new card or "hit"
-                print(f" your hand is now: {playershand} (your value is: {playersvalue})")
+                print(f"Your hand is now: {playershand} (Your value is now: {playersvalue})")
 
                 if playersvalue == 21: 
-                    print ("Winner, Blackjack")
+                    print ("Winner, You've got Blackjack")
                     
                 elif playersvalue > 21:
-                    print ("You lose, bust")
+                    print ("Bust, You've lost!")
 
             elif playermove == "stand":
                 break
