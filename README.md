@@ -12,3 +12,5 @@ The game will show a player the end value of their cards compared to the houses 
 To simulate a "bet" the user will gain 100 chips each round they win, and lose 75 chips each round they loose. The goal of the game is to get as many chips as possible before you can "cash out" and end your game
 
 Once your game is ended, you can see your score on a list of highscores.
+
+Have fun and good luck in coding Vegas!
