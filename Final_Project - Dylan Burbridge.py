@@ -48,8 +48,8 @@ def gameround(deck):
             #if player capitalizes or adds a space in their answer
             if playermove == "hit": #This will randomly select a new card from the deck and give it to the player
                 playershand.append(dealcard(deck))
-                playersvalue = playerhandvalue(playershand)
-                print(f" your hand is now: {playershand}")
+                playersvalue = playerhandvalue(playershand) # this line will update the value of the players hand if they take a new card or "hit"
+                print(f" your hand is now: {playershand} (your value is: {playersvalue})")
 
                 if playersvalue == 21: 
                     print ("Winner, Blackjack")
@@ -74,7 +74,7 @@ def gameround(deck):
         while housesvalue < 16: 
             houseshand.append(dealcard(deck))
             housesvalue = playerhandvalue(houseshand)
-            print(f"house takes a card: {houseshand[-1]} (total value: {housesvalue})")
+            print(f"house takes a card: {houseshand[-1]} (houses value is: {housesvalue})")
 
 
                 
