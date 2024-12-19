@@ -46,7 +46,7 @@ def gameround(deck):
         while playersvalue < 21:
             playermove = input("stand or hit") .strip().lower() # Added strip and lower values to prevent a misinput 
             #if player capitalizes or adds a space in their answer
-            if move == "hit": #This will randomly select a new card from the deck and give it to the player
+            if playermove == "hit": #This will randomly select a new card from the deck and give it to the player
                 playershand.append(dealcard(deck))
                 print(f" your hand is now: {playershand}")
 
@@ -54,9 +54,9 @@ def gameround(deck):
                     print ("Winner, Blackjack")
                     
                 elif playersvalue > 21:
-                    print (You lose, bust)
+                    print ("You lose, bust")
 
-            elif move == "stand":
+            elif playermove == "stand":
                 break
             #this line below ensures player only types either "Hit" or "Stand"
             #as these are the only acceptable inputs, nothing will happen if either is not inputed
@@ -64,17 +64,17 @@ def gameround(deck):
                 print("No imput detected, please only print 'Hit' or 'Stand'")
 
 
-        print(f "\n houses hand is: {houseshand}")
+        print(f"\n houses hand is: {houseshand}")
 
 
         # This is a result of researching casinos, to simpify for a simple card game if the house (computer)
         # has a hand with a value less than 16, it will deal itself another card. This logic follows the policy
         # of most casinos which often train dealers to hit on either 16 or 17
-        while houses value < 16: 
+        while housesvalue < 16: 
             houseshand.append(dealcard(deck))
             housesvalue = playerhandvalue(houseshand)
             print(f"house takes a card: {houseshand[-1]} (total value: {housesvalue})")
-                        
+
 
                 
                 
