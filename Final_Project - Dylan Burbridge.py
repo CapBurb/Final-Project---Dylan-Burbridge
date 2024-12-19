@@ -32,7 +32,7 @@ def gameround(deck):
     housesvalue = playerhandvalue(houseshand)
 
     print(f"\n Your hand is: \n {playershand}. \n The value of your hand is: {playersvalue}")
-    print(f"\n Houses hand is: \n ['{houseshand[0]}'].")
+    print(f"\n Houses hand is: \n ['{houseshand[0]}'],[Unknown card].")
 
 
     #the two lines below will immediately determine if the play wins or looses based on the slim chance
@@ -50,7 +50,7 @@ def gameround(deck):
             if playermove == "hit": #This will randomly select a new card from the deck and give it to the player
                 playershand.append(dealcard(deck))
                 playersvalue = playerhandvalue(playershand) # this line will update the value of the players hand if they take a new card or "hit"
-                print(f"\nYour hand is now: {playershand} \nThe value of your hand is now: {playersvalue})")
+                print(f"\nYour hand is now: {playershand} \nThe value of your hand is now: {playersvalue}")
 
                 if playersvalue == 21: 
                     print ("\nWinner, You've got Blackjack!")
@@ -66,7 +66,7 @@ def gameround(deck):
                 print("\nNo input detected, please only print 'Hit' or 'Stand'")
 
 
-        print(f"\n The Houses hand is: {houseshand} \nThe value of the Houses hand is: {housesvalue}")
+        print(f"\n The Houses hand is now: {houseshand} \nThe value of the Houses hand is: {housesvalue}")
 
 
         # This is a result of researching casinos, to simpify for a simple card game if the house (computer)
@@ -75,7 +75,7 @@ def gameround(deck):
         while housesvalue < 16: 
             houseshand.append(dealcard(deck))
             housesvalue = playerhandvalue(houseshand)
-            print(f"\n The Houses hand is: {houseshand[-1]} The value of the Houses handis: {housesvalue})")
+            print(f"\n The Houses hand is now : {houseshand}, [Unknown Card] \nThe value of the Houses hand is: {housesvalue}")
 
 
                 
