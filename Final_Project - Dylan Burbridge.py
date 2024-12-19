@@ -21,5 +21,7 @@ def dealcard(deck):
 # This starts the round of blackjack, Dealing two cards to both the player and 
 # "house" (The computer) 
 def gameround(deck):
-    playershand = [dealcard(deck)]
-    houseshand = [dealcard(deck)]
+    playershand = [dealcard(deck),dealcard(deck)]
+    houseshand = [dealcard(deck),dealcard(deck)]
+
+print(f"\n your hand is : players hand")
