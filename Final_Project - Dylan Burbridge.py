@@ -48,6 +48,7 @@ def gameround(deck):
             #if player capitalizes or adds a space in their answer
             if playermove == "hit": #This will randomly select a new card from the deck and give it to the player
                 playershand.append(dealcard(deck))
+                playersvalue = playerhandvalue(playershand)
                 print(f" your hand is now: {playershand}")
 
                 if playersvalue == 21: 
