@@ -1,10 +1,6 @@
 
 # this file is the "Deck Creation file" it is responsible for creating a deck of 52 cards to mimic that of the decks used in blackjack.
 
-print("|_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_|")
-print("♣-♦-♥-♠- Welcome to Python BlackJack -♠-♥-♦-♣")
-print("|-------------------------------------------|")
-
 # this section of code creates two variables, the cardsuits which coorespond to the four suits of a deck
 # and the cardvalues from one to ten as well as four face cards 
 cardsuits = ['Diamonds', 'Hearts','Clubs','Spades']
