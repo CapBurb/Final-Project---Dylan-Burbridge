@@ -26,6 +26,24 @@ def gameround(deck):
 
 # This print statement will show the player the value of their two cars
     print(f"\nyour hand is : {playershand}")
+    print(f"houses hand is: {houseshand[0]}")
+
+# This statement will take the random dealt cards from gameround and playershand and houses hand
+# and then convert them into values that the program can understand
+
+# The variable "playerhandvalue" could be renamed for clarity, however it remains as an artifact of previous coding ideas
+    playersvalue = playerhandvalue(playershand)
+    housesvalue = playerhandvalue(houseshand)
+
+    #the two lines below will immediately determine if the play wins or looses based on the slim chance
+    # that a player immediately gets a value of 21 or higher
+    if playersvalue == 21: 
+        print (Winner, Blackjack)
+
+    elif playersvalue > 21:
+        print (You lose, bust)
+    
+
 
 if __name__ == "__main__":
     deck = createdeck[:]
