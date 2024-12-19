@@ -12,7 +12,7 @@ import random
 # These call up seperate files for the value of a players hand and
 # The creation of a deck of cards
 from Card_value_file import playerhandvalue
-from Final project card generation import createdeck
+from Final_project_card_generation import createdeck
 
 # This will represent a player being dealt a card from the deck
 def dealcard(deck):
@@ -24,4 +24,4 @@ def gameround(deck):
     playershand = [dealcard(deck),dealcard(deck)]
     houseshand = [dealcard(deck),dealcard(deck)]
 
-print(f"\n your hand is : players hand")
+print(f"\n your hand is : {playershand}")
