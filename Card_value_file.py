@@ -9,10 +9,12 @@ def playerhandvalue:
 # While the ace value is determined to be worth 11, the game of Blackjack dictates that the value of aces are either 1 or 10 depending on the hand of the player
 # The code below will determine the value of an ace based on the value of a players hand (above or below 21)
 
-value = sum(cardvalue[card.split('')[0]] for card in playerhand)
+value = sum(cardvalues[card.split(' ')[0]] for card in playerhand)
 
 aces = sum(1 for card in playerhand if card.startswith('Ace'))
-while value > 21 and Aces > 0:
+
+while value > 21 and aces > 0:
     value -= 10
     aces -= 1
+
 return value 
