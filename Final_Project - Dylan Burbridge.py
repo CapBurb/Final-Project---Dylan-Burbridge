@@ -30,7 +30,6 @@ def gameround(deck):
 
 # This statement will take the random dealt cards from gameround and playershand and houses hand
 # and then convert them into values that the program can understand
-
 # The variable "playerhandvalue" could be renamed for clarity, however it remains as an artifact of previous coding ideas
     playersvalue = playerhandvalue(playershand)
     housesvalue = playerhandvalue(houseshand)
@@ -38,15 +37,33 @@ def gameround(deck):
     #the two lines below will immediately determine if the play wins or looses based on the slim chance
     # that a player immediately gets a value of 21 or higher
     if playersvalue == 21: 
-        print (Winner, Blackjack)
+        print ("Winner, Blackjack")
 
     elif playersvalue > 21:
-        print (You lose, bust)
+        print ("You lose, bust")
+
+    else:
+        while playersvalue < 21:
+            playermove = input("stand or hit")
+            if move == "hit": #This will randomly select a new card from the deck and give it to the player
+                playershand.append(dealcard(deck))
+                print(f" your hand is now: {playershand}")
+
+                if playersvalue == 21: 
+                    print ("Winner, Blackjack")
+                    
+                elif
+                
+
+                
+                
+
     
 
 
 if __name__ == "__main__":
-    deck = createdeck[:]
+
+    deck = createdeck[:] # for the clarity of the code, the deck and "createdeck" functions are seperated
     random.shuffle(deck) # This with "shuffle" the deck to ensure cards are not repeated
 
 gameround(deck)
