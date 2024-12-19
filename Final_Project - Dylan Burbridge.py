@@ -16,7 +16,7 @@ from Final_project_card_generation import createdeck
 
 # This will represent a player being dealt a card from the deck
 def dealcard(deck):
-    return deck.pop(random.randint(0, len(deck - 1)))
+    return deck.pop(random.randint(0, len(deck) - 1))
 
 # This starts the round of blackjack, Dealing two cards to both the player and 
 # "house" (The computer) 
@@ -24,4 +24,5 @@ def gameround(deck):
     playershand = [dealcard(deck),dealcard(deck)]
     houseshand = [dealcard(deck),dealcard(deck)]
 
-print(f"\n your hand is : {playershand}")
+# This print statement will show the player the value of their two cars
+print(f"\nyour hand is : {playershand}")
