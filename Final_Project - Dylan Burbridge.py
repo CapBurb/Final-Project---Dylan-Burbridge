@@ -58,7 +58,7 @@ def gameround(deck):
             elif move == "stand":
                 break
             else:
-                print("No imput detected, please only print "Hit" or "Stand")
+                print("No imput detected, please only print 'Hit' or 'Stand"")
                 
 
                 
