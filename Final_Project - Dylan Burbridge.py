@@ -3,10 +3,6 @@
 # To motivate the player, the goal of this game is to get the highest amount of "Chips" this will be the players highscore
 # The game will end once the player runs out of "Chips"
 
-print("|_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_|")
-print("♣-♦-♥-♠- Welcome to Python BlackJack -♠-♥-♦-♣")
-print("|-------------------------------------------|")
-
 import random
 
 # These call up seperate files for the value of a players hand and
@@ -94,8 +90,22 @@ def gameround(deck):
     
 
 if __name__ == "__main__":
-
     deck = createdeck[:] # for the clarity of the code, the deck and "createdeck" functions are seperated
     random.shuffle(deck) # This with "shuffle" the deck to ensure cards are not repeated
+
+    print("|_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_|")
+    print("♣-♦-♥-♠- Welcome to Python BlackJack -♠-♥-♦-♣")
+    print("|-------------------------------------------|")
+
+    while true:
+        userplay = input("Would you like to begin a round? (Yes/No): ") .strip().lower()
+        if userplay == "yes":
+            deck = createdeck[:] # for the clarity of the code, the deck and "createdeck" functions are seperated
+            random.shuffle(deck) # This with "shuffle" the deck to ensure cards are not repeated
+
+
+    
+
+
 
 gameround(deck)
