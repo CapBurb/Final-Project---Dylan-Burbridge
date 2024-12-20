@@ -1,0 +1,1 @@
+# this file will work with a text file named "highscore.txt"
