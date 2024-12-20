@@ -96,16 +96,19 @@ if __name__ == "__main__":
     print("♣-♦-♥-♠- Welcome to Python BlackJack -♠-♥-♦-♣")
     print("|-------------------------------------------|")
 
-    while True:
-        userplay = input("\nWould you like to begin a round? (Yes/No): ") .strip().lower()
+    print("\nYou will start with 200 chips. \n If you win a round you will gain 100 chips. \n If you lose a round you will lose 75 chips.")
+    chips = 200 # This is the starting chip variable, which will update based on the game rules above
+
+    while Chips > 0:
+        userplay = input("\nWould you like to begin a round? (Yes/No): ") .strip().lower() # To allow users to choose if they want to start a game or not
         if userplay == "yes":
             deck = createdeck[:] # for the clarity of the code, the deck and "createdeck" functions are seperated
             random.shuffle(deck) # This with "shuffle" the deck to ensure cards are not repeated
             gameround(deck)
         elif userplay == "no":
-            print("\nSmart, Gambling is bad for you.")
+            print("\nSmart, Gambling is bad for you.") # Life advice
             break # If the player types "no" a break is used to end the game
         else:
-            print("\nPlease type 'yes' or 'no'.")
+            print("\nPlease type 'yes' or 'no'.") # to ensure that only the required input is accepted
 
     
