@@ -116,7 +116,7 @@ if __name__ == "__main__":
     print("\nYou will start with 200 chips. \n If you win a round you will gain 100 chips. \n If you lose a round you will lose 75 chips.")
     
     highscores = highscorereading() #this section calls up our code from the highscores file
-    print("Current high scores: ")  # and writes if the player got a highscore stored in our dictionary
+    print("\nCurrent high scores: ")  # and writes if the player got a highscore stored in our dictionary
     for player, score in highscores.items():
         print(f"{player}: {score}")
     print()
