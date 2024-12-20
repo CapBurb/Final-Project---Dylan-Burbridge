@@ -13,3 +13,4 @@ The goal of the game is to get as many chips as possible before you can "cash ou
 Once your game has ended, you can see your score on a list of high scores.
 
 Have fun and good luck in coding Vegas!
+To begin your game, run the "Final_project" code

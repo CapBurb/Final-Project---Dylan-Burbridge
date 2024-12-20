@@ -98,6 +98,7 @@ def gameround(deck, chips):
         return chips           
     elif playersvalue == housesvalue:
         print("\nIt's a tie, push to next round.")
+        return chips
     else:
         print("\nThe house always wins. \n Better luck next round.") # Hidden game reference here
         chips -= 75
