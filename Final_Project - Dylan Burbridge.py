@@ -41,7 +41,8 @@ def gameround(deck, chips):
         chips += 100
         return chips
 
-    elif playersvalue > 21:
+    elif playersvalue > 21: # these sections follow the rules of blackjack, showing that you lose if you go over a score
+        # of 21
         print ("\nBust, You've lost!")
         chips -= 75
         return chips
@@ -136,7 +137,7 @@ if __name__ == "__main__":
         else:
             print("\nPlease type 'yes' or 'no'.") # to ensure that only the required input is accepted
 
-    if chips < 0:
+    if chips > 0 and updatehighscore(playername, chips):
+        print("\n You have set a new highscore!")
+    else:
         print("\n You are all out of chips. Game over and better luck next time!")
-        if updatehighscore(playername,chips):
-            print("\n You have set a new highscore!")
