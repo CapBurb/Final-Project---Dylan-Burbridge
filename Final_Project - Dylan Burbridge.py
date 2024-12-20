@@ -53,6 +53,7 @@ def gameround(deck):
                     
                 elif playersvalue > 21:
                     print ("\nBust, You've lost!")
+                    return
 
             elif playermove == "stand":
                 break
