@@ -29,4 +29,8 @@ def writehighscores(highscores): # this will store the players name next to thei
 def updatehighscore(playername,score): #this section of code is responsible for comparing
     # the score of a player to the highscore and determining if the list of highscores should be updated (written to)
     highscores = readhighscores()
-    if playername not in highscores or score > highscores[playername}
+    if playername not in highscores or score > highscores[playername}:
+        highscores[playername] = score
+        writehighscore(highscore)
+        return True
+    return False
