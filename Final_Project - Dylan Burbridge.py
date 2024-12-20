@@ -100,6 +100,7 @@ if __name__ == "__main__":
     chips = 200 # This is the starting chip variable, which will update based on the game rules above
 
     while Chips > 0:
+        print(f"\n You have: {chips} chips left.")
         userplay = input("\nWould you like to begin a round? (Yes/No): ") .strip().lower() # To allow users to choose if they want to start a game or not
         if userplay == "yes":
             deck = createdeck[:] # for the clarity of the code, the deck and "createdeck" functions are seperated
@@ -111,4 +112,5 @@ if __name__ == "__main__":
         else:
             print("\nPlease type 'yes' or 'no'.") # to ensure that only the required input is accepted
 
-    
+    if chips < 0:
+        print("\n You are all out of chips. Game over and better luck next time!")
