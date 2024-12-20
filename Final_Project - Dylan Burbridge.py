@@ -35,9 +35,13 @@ def gameround(deck):
     # that a player immediately gets a value of 21 or higher
     if playersvalue == 21: 
         print ("\nWinner!, You've got Blackjack!")
+        chips += 100
+        return chips
 
     elif playersvalue > 21:
         print ("\nBust, You've lost!")
+        chips -= 75
+        reurn chips
 
     else:
         while playersvalue < 21:
@@ -50,10 +54,13 @@ def gameround(deck):
 
                 if playersvalue == 21: 
                     print ("\nWinner, You've got Blackjack!")
+                    chips += 100
+                    return chips
                     
                 elif playersvalue > 21:
                     print ("\nBust, You've lost!")
-                    return
+                    chips -= 75
+                    return chips
 
             elif playermove == "stand":
                 break
@@ -82,11 +89,16 @@ def gameround(deck):
 #these lines compare the value of the players total cards vs the value of the houses total cards
 # it also will print to show the players if they win tie or lose
     if housesvalue > 21 or playersvalue > housesvalue:
-        print("\nYou've won this round!")          
+        print("\nYou've won this round!")
+        chips += 100 
+        return chips           
     elif playersvalue == housesvalue:
         print("\nIt's a tie, push to next round.")
     else:
         print("\nThe house always wins. \n Better luck next round.") # Hidden game reference here
+        chips -= 75
+        return chips
+    
 
     
 
@@ -97,9 +109,11 @@ if __name__ == "__main__":
     print("|-------------------------------------------|")
 
     print("\nYou will start with 200 chips. \n If you win a round you will gain 100 chips. \n If you lose a round you will lose 75 chips.")
-    chips = 200 # This is the starting chip variable, which will update based on the game rules above
+    
+    chips = 200 
+    # This is the starting chip variable, which will update based on the game rules above
 
-    while Chips > 0:
+    while chips > 0:
         print(f"\n You have: {chips} chips left.")
         userplay = input("\nWould you like to begin a round? (Yes/No): ") .strip().lower() # To allow users to choose if they want to start a game or not
         if userplay == "yes":
