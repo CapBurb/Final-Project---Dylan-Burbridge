@@ -81,17 +81,15 @@ def gameround(deck):
 #these lines compare the value of the players total cards vs the value of the houses total cards
 # it also will print to show the players if they win tie or lose
     if housesvalue > 21 or playersvalue > housesvalue:
-        print("\nYou've won this game!")          
+        print("\nYou've won this round!")          
     elif playersvalue == housesvalue:
-        print("\nIt's a tie, push to next game.")
+        print("\nIt's a tie, push to next round.")
     else:
-        print("\nThe house always wins. \n Better luck next game.")
+        print("\nThe house always wins. \n Better luck next round.") # Hidden game reference here
 
     
 
 if __name__ == "__main__":
-    deck = createdeck[:] # for the clarity of the code, the deck and "createdeck" functions are seperated
-    random.shuffle(deck) # This with "shuffle" the deck to ensure cards are not repeated
 
     print("|_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_|")
     print("♣-♦-♥-♠- Welcome to Python BlackJack -♠-♥-♦-♣")
@@ -105,11 +103,8 @@ if __name__ == "__main__":
             gameround(deck)
         elif userplay == "no":
             print("\nSmart, Gambling is bad for you.")
-            break
+            break # If the player types "no" a break is used to end the game
         else:
             print("\nPlease type 'yes' or 'no'.")
 
     
-
-
-gameround(deck)
