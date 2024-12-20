@@ -97,12 +97,17 @@ if __name__ == "__main__":
     print("♣-♦-♥-♠- Welcome to Python BlackJack -♠-♥-♦-♣")
     print("|-------------------------------------------|")
 
-    while true:
-        userplay = input("Would you like to begin a round? (Yes/No): ") .strip().lower()
+    while True:
+        userplay = input("\nWould you like to begin a round? (Yes/No): ") .strip().lower()
         if userplay == "yes":
             deck = createdeck[:] # for the clarity of the code, the deck and "createdeck" functions are seperated
             random.shuffle(deck) # This with "shuffle" the deck to ensure cards are not repeated
-
+            gameround(deck)
+        elif userplay == "no":
+            print("\nSmart, Gambling is bad for you.")
+            break
+        else:
+            print("\nPlease type 'yes' or 'no'.")
 
     
 
