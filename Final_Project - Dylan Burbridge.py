@@ -41,7 +41,7 @@ def gameround(deck):
     elif playersvalue > 21:
         print ("\nBust, You've lost!")
         chips -= 75
-        reurn chips
+        return chips
 
     else:
         while playersvalue < 21:
