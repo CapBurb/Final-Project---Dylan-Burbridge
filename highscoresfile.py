@@ -6,7 +6,15 @@ highscorefile = "highscores.txt"
 
 # this code will create a new variable that reads a highscore to players after
 # they quit the game or run out of chips
-# this will use a dictionarie to track a players chips, wins, losses, ties
+# this will use a dictionary to track a players chips, wins, losses, ties
 def highscorereading():
     highscores = {}
-    
+    try:
+        with open(highscorefile, "r") as file:
+            for line in file:
+                if ':' in line:
+                    player, score = line.strip().split(":")
+                    highscore[player] = int(score)
+    except FileNotFoundError:
+        pass
+    return highscores
