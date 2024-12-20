@@ -8,7 +8,7 @@ import random
 # These call up seperate files for the value of a players hand and
 # The creation of a deck of cards and the highscore counter
 from Card_value_file import playerhandvalue
-from high_scoresfile import readhighscores, updatehighscores
+from high_scoresfile import highscorereading, updatehighscore
 from Final_project_card_generation import createdeck
 
 
@@ -113,6 +113,13 @@ if __name__ == "__main__":
 
     print("\nYou will start with 200 chips. \n If you win a round you will gain 100 chips. \n If you lose a round you will lose 75 chips.")
     
+    highscores = highscorereading() #this section calls up our code from the highscores file
+    print("Current high scores: ")  # and writes if the player got a highscore stored in our dictionary
+    for player, score in highscores.items():
+        print(f"{player}: {score}")
+    print()
+
+    playername = input("Enter a name: ").strip()
     chips = 200 
     # This is the starting chip variable, which will update based on the game rules above
 
@@ -131,3 +138,5 @@ if __name__ == "__main__":
 
     if chips < 0:
         print("\n You are all out of chips. Game over and better luck next time!")
+        if updatehighscore(playername,chips):
+            print("\n You have set a new highscore!")
