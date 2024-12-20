@@ -75,7 +75,7 @@ def gameround(deck):
             print(f"\n The Houses hand is now : {houseshand}, \nThe value of the Houses hand is: {housesvalue}")
 
 # This will compare the scores of the final game and show if the house won, tied or lost
-        print(f"\nGame results: \nYour hand is: {playershand} \nThe value of your hand is: {playersvalue}")
+        print(f"\nGame results:\n \nYour hand is: {playershand} \nThe value of your hand is: {playersvalue}")
         print(f"\nThe Houses hand is: {houseshand} \nThe value of the Houses hand is: {housesvalue}")           
 
 
