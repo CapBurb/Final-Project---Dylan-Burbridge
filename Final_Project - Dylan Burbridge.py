@@ -123,7 +123,7 @@ if __name__ == "__main__":
 
     playername = input("Enter a name: ").strip()
     chips = 200 
-    # This is the starting chip variable, which will update based on the game rules above
+    # This is the starting chip variable, which will updte based on the game rules above
 
     while chips > 0:
         print(f"\n You have: {chips} chips left.")
