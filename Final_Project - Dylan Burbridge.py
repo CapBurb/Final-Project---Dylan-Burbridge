@@ -6,9 +6,12 @@
 import random
 
 # These call up seperate files for the value of a players hand and
-# The creation of a deck of cards
+# The creation of a deck of cards and the highscore counter
 from Card_value_file import playerhandvalue
+from high_scoresfile import readhighscores, updatehighscores
 from Final_project_card_generation import createdeck
+
+
 
 # This will represent a player being dealt a card from the deck
 def dealcard(deck):
