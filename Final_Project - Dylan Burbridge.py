@@ -16,7 +16,7 @@ def dealcard(deck):
 
 # This starts the round of blackjack, Dealing two cards to both the player and 
 # "house" (The computer) 
-def gameround(deck):
+def gameround(deck, chips):
     playershand = [dealcard(deck),dealcard(deck)]
     houseshand = [dealcard(deck),dealcard(deck)]
 
@@ -119,7 +119,7 @@ if __name__ == "__main__":
         if userplay == "yes":
             deck = createdeck[:] # for the clarity of the code, the deck and "createdeck" functions are seperated
             random.shuffle(deck) # This with "shuffle" the deck to ensure cards are not repeated
-            gameround(deck)
+            chips = gameround(deck,chips)
         elif userplay == "no":
             print("\nSmart, Gambling is bad for you.") # Life advice
             break # If the player types "no" a break is used to end the game
