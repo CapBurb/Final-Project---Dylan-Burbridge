@@ -10,11 +10,23 @@ highscorefile = "highscores.txt"
 def highscorereading():
     highscores = {}
     try:
-        with open(highscorefile, "r") as file:
+        with open(highscorefile, "r") as file: # this uses "r" as a read only file
             for line in file:
                 if ':' in line:
-                    player, score = line.strip().split(":")
+                    player, score = line.strip().split(":") 
                     highscore[player] = int(score)
     except FileNotFoundError:
         pass
-    return highscores
+    return highscores # this will return the highscore values
+
+def writehighscores(highscores): # this will store the players name next to their highscore 
+    # in a dictionary and write to said text file
+    with open(highscorefile, "w") as file:
+        for player, score in highscore.items():
+            file.write(f"{player}:{score}\n") # this is the line responsible for writing the highscores to
+            # the text file "highscores.txt"
+
+def updatehighscore(playername,score): #this section of code is responsible for comparing
+    # the score of a player to the highscore and determining if the list of highscores should be updated (written to)
+    highscores = readhighscores()
+    if playername not in highscores or score > highscores[playername}
