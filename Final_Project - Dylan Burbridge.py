@@ -137,7 +137,7 @@ if __name__ == "__main__":
         else:
             print("\nPlease type 'yes' or 'no'.") # to ensure that only the required input is accepted
 
-    if chips > 0 and updatehighscore(playername, chips):
+    if chips > 0 and updatehighscore(playername, chips): # updates highscores once the player leaves the game
         print("\n You have set a new highscore!")
     else:
         print("\n You are all out of chips. Game over and better luck next time!")

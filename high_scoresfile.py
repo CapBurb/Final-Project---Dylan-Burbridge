@@ -2,7 +2,7 @@
 # track and save the ammount of chips each player has and use it to create
 # a list of top chip amounts, serving as a highscore board
 
-highscorefile = "highscores.txt"
+highscorefile = "highscore.txt"
 
 # this code will create a new variable that reads a highscore to players after
 # they quit the game or run out of chips
@@ -31,6 +31,6 @@ def updatehighscore(playername,score): #this section of code is responsible for 
     highscores = highscorereading()
     if playername not in highscores or score > highscores[playername]:
         highscores[playername] = score
-        writehighscore(highscores) #this will write the new highscore to the text file
+        writehighscores(highscores) #this will write the new highscore to the text file
         return True
     return False
