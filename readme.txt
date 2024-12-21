@@ -1,7 +1,6 @@
 For my final project, I decided to emulate a straightforward blackjack game that has the player face against the House (Computer)
 
-Upon opening the code, the user will be greeted with a text banner and dealt two cards. The house will also be dealt two cards. 
-The user will see a short prompt at the first code opening that explains the rules of blackjack, as well as how the game translates into the coded emulator.
+Upon opening the code, the user will be greeted with a text banner and dealt two cards. 
 
 The value of these cards is calculated for the user's convenience, which can be very helpful for those who have not played blackjack before. 
 The same is true of the house cards. During the game, the user will have only two inputs "hit" or "stay" as these are the only actions that can be taken.
